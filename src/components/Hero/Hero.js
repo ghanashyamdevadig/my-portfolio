@@ -21,7 +21,7 @@ export default function Hero() {
           </h1>
           <p className={styles.subtitle}>Crafting Digital Experiences</p>
           <p className={styles.description}>
-            Co-Tech Lead with 3+ years of experience building scalable,
+            SDE 2 with 3+ years of experience building scalable,
             high-performance web applications at Trade Brains
           </p>
           <div className={styles.stats}>

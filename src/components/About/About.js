@@ -13,8 +13,8 @@ export default function About() {
               <span className={styles.highlight}>Frontend Developer</span> with
               3+ years of experience building scalable, high-performance web
               applications. Currently serving as{" "}
-              <span className={styles.highlight}>Co-Tech Lead</span> at Trade
-              Brains, where I shape the technical direction of a stock analytics
+              <span className={styles.highlight}>SDE 2</span> at Trade Brains,
+              where I shape the technical direction of a stock analytics
               platform serving 45K+ monthly users.
             </p>
             <p className={styles.paragraph}>

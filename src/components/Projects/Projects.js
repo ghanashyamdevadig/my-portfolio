@@ -43,6 +43,26 @@ export default function Projects() {
       //   url: "https://admin.tradebrains.in",
       period: "Jul 2024 - Present",
     },
+    {
+      title: "Human Resource Management System (HRMS)",
+      description:
+        "Designed and developed a comprehensive HR management system to streamline employee lifecycle operations, automate workflows, and centralize organizational data.",
+      tech: ["Next.js", "RBAC", "Workflow Management", "ANTD"],
+      features: [
+        "Role-Based Access Control (Admin, Managers, HRs, Employees)",
+        "Employee document management system (upload, access, verification)",
+        "Leave management system with apply, approve, and reject workflows",
+        "Integrated calendar for attendance, holidays, and events tracking",
+        "Daily login/logout tracking with detailed time logs",
+        "Reimbursement management for employees and admin approvals",
+        "Leave encashment handling and processing",
+        "Customized dashboards based on user roles",
+        "Centralized employee data and lifecycle management",
+      ],
+      impact:
+        "Significantly improved HR efficiency by automating manual processes and reducing administrative overhead",
+      period: "Mar 2025 - Present",
+    },
   ];
 
   const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
@@ -67,15 +87,17 @@ export default function Projects() {
                         <h3 className={styles.projectTitle}>{project.title}</h3>
                         <p className={styles.projectPeriod}>{project.period}</p>
                       </div>
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.projectLink}
-                      >
-                        <span className={styles.linkText}>View Live</span>
-                        <span className={styles.linkIcon}>→</span>
-                      </a>
+                      {project?.url && (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.projectLink}
+                        >
+                          <span className={styles.linkText}>View Live</span>
+                          <span className={styles.linkIcon}>→</span>
+                        </a>
+                      )}
                     </div>
 
                     <p className={styles.projectDescription}>
@@ -109,17 +131,19 @@ export default function Projects() {
                       </span>
                     </div>
 
-                    <div className={styles.projectUrl}>
-                      <span className={styles.urlLabel}>🔗 Hosted at:</span>
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.url}
-                      >
-                        {project.url}
-                      </a>
-                    </div>
+                    {project.url && (
+                      <div className={styles.projectUrl}>
+                        <span className={styles.urlLabel}>🔗 Hosted at:</span>
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.url}
+                        >
+                          {project.url}
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
